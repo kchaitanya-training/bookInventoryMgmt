@@ -1,7 +1,3 @@
-# ignore ALL .classpath files
-*.classpath
-# ignore ALL .project files
-*.project
-# ignore ALL bin files
+
 bin
 
