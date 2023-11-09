@@ -11,6 +11,15 @@ import com.takeo.bookinventorymgmt.model.Book;
 public class BookInventoryService {
 
 	BookInventory bookInventory;
+	
+	
+
+	public BookInventoryService() {
+	
+		this.bookInventory = new BookInventory();
+	}
+
+
 
 	public void addBook(BufferedReader br) throws BookInventoryException {
 
@@ -31,8 +40,6 @@ public class BookInventoryService {
 				String bookDescription = br.readLine();
 
 				Book book = new Book(bookName, category, price, bookDescription);
-
-				bookInventory = new BookInventory();
 				bookInventory.addBook(book);
 			} catch (IOException  e) {
 				

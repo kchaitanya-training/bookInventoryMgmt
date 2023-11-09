@@ -14,11 +14,12 @@ public class BookInventorController {
 	public static void main(String[] args)  {
 		
 	
-		BookInventoryService service;
+		BookInventoryService service=new BookInventoryService();
+		
 		InputStreamReader reader=new InputStreamReader(System.in);
 		BufferedReader br=new BufferedReader(reader);
 		
-			service=new BookInventoryService();
+			
 	
 				try {
 					service.addBook(br);
