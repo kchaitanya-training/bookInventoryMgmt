@@ -43,6 +43,30 @@ public class Book {
 	public String getBookDescription() {
 		return bookDescription;
 	}
+
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public void setBookDescription(String bookDescription) {
+		this.bookDescription = bookDescription;
+	}
+	
+	
+	
+	
 	
 	
 	

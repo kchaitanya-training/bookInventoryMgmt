@@ -2,7 +2,7 @@ package com.takeo.bookinventorymgmt.service;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.sql.SQLException;
+import java.util.List;
 
 import com.takeo.bookinventorymgmt.dao.BookInventory;
 import com.takeo.bookinventorymgmt.exception.BookInventoryException;
@@ -28,8 +28,11 @@ public class BookInventoryService {
 			while (true) {
 				try {
 					String str = br.readLine();
-				System.out.print("Enter BookName :");
+				System.out.print("Enter BookName or leave blank to exit :");
 				String bookName = br.readLine();
+				if(bookName.isEmpty()){
+		break;
+				}
 
 				System.out.print("Enter category :");
 				String category = br.readLine();
@@ -54,6 +57,26 @@ public class BookInventoryService {
 			}
 
 		}
+	
+	public List<String> getAllBooksNames(){
+		return bookInventory.getBookNames();
+	}
+	
+	
+	public List<Book> getBooks(){
+		return bookInventory.getBook();
+	}
+	
+	public void updateBook(String bookName){
+		
+		List<Book> b=bookInventory.getBook();
+		for(Book book:b){
+			if(book.getBookName()==bookName){
+				bookInventory.updateBookName(book,bookName);
+			}
+		}
+	}
+	
 }
 	
 
